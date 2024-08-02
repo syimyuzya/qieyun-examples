@@ -282,6 +282,7 @@ function 調整聲母(音節) {
     [選項.知組 === 'tɹ', { 'ʈ': 'tɹ', 'ɖ': 'dɹ', 'ɳ': 'nɹ' }],
   ].reduce((prev, cur) => Object.assign(prev, cur[0] ? cur[1] : {}), {});
 
+  // FIXME 精清從母
   if (Object.keys(舊版聲母字典).includes(音節.聲母[0])) {
     音節.聲母 = 舊版聲母字典[音節.聲母[0]] + 音節.聲母.slice(1);
   }
